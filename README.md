@@ -1,8 +1,6 @@
 # AI PDF Chatbot & Agent Powered by LangChain and LangGraph
 
-This monorepo is a customizable template example of an AI chatbot agent that "ingests" PDF documents, stores embeddings in a vector database (Supabase), and then answers user queries using OpenAI (or another LLM provider) utilising LangChain and LangGraph as orchestration frameworks.
-
-This template is also an accompanying example to the book [Learning LangChain (O'Reilly)](https://www.oreilly.com/library/view/learning-langchain/9781098167271): Building AI and LLM applications with LangChain and LangGraph.
+This project is a full-stack AI-powered document search system that allows users to upload PDF files and query them using natural language. The system retrieves relevant document context and generates accurate responses using LLMs and retrieval-based techniques.
 
 **Here's what the Chatbot UI looks like:**
 
@@ -32,6 +30,17 @@ This template is also an accompanying example to the book [Learning LangChain (O
 ---
 
 ## Features
+-**Upload and process multiple PDF documents
+
+Semantic document search using embeddings
+
+Context-aware question answering over documents
+
+Real-time response generation in a chat interface
+
+Modular backend architecture for easy extension
+
+Scalable design suitable for real-world use cases**
 
 - **Document Ingestion Graph**: Upload and parse PDFs into `Document` objects, then store vector embeddings into a vector database (we use Supabase in this example).
 - **Retrieval Graph**: Handle user questions, decide whether to retrieve documents or give a direct answer, then generate concise responses with references to the retrieved documents.
@@ -87,18 +96,11 @@ The system consists of:
 
 ## Installation
 
-1. **Clone** the repository:
-
-   ```bash
-   git clone https://github.com/mayooear/ai-pdf-chatbot-langchain.git
-   cd ai-pdf-chatbot-langchain
-   ```
-
-2.	Install dependencies (from the monorepo root):
+	Install dependencies (from the monorepo root):
 
 yarn install
 
-	3.	Configure environment variables in both backend and frontend. See .`env.example` files for details.
+		Configure environment variables in both backend and frontend. See .`env.example` files for details.
 
 ## Environment Variables
 
@@ -171,7 +173,7 @@ cd backend
 yarn langgraph:dev
 ```
 
-This will launch a local LangGraph server on port 2024 by default. It should redirect you to a UI for interacting with the LangGraph server. [Langgraph studio guide](https://langchain-ai.github.io/langgraph/concepts/langgraph_studio/)
+This will launch a local LangGraph server on port 2024 by default. It should redirect you to a UI for interacting with the LangGraph server. 
 
 ### Running the Frontend
 
@@ -272,5 +274,4 @@ You can customize the agent on the backend and frontend.
 
 If you'd like to contribute to this project, feel free to open a pull request. Ensure it is well documented and includes tests in the test files.
 
-If you'd like to learn more about building AI chatbots and agents with LangChain and LangGraph, check out the book [Learning LangChain (O'Reilly)](https://www.oreilly.com/library/view/learning-langchain/9781098167271/).
 
