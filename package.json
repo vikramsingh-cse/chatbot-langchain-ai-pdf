@@ -5,6 +5,7 @@
     "version": "0.0.1",
     "author": "Vikram Singh",
     "license": "MIT",
+    "packageManager": "yarn@1.22.22",
     "workspaces": [
       "backend",
       "frontend"
